@@ -1,0 +1,81 @@
+/* Light and Dark Theme based on user's machine settings */
+:root {
+    --background-light: #eeeeee;
+    --background-medium-light: #dddddd;
+    --text-light: #222222;
+    --background-dark: #222222;
+    --background-medium-dark: #333333;
+    --text-dark: #eeeeee;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: var(--background-light);
+        color: var(--text-light);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    .environment-div {
+        background-color: var(--background-medium-dark);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    height: 100%;
+}
+
+.top-div{
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 16px;
+    display: grid;
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+h1{
+    font-size: 4em;
+}
+
+.version-number{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.environment-div {
+    background-color: var(--environment-background); /* Theme-aware background color */
+    border-radius: 10px; /* Rounded borders */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    display: grid;
+    grid-template-rows: auto auto; /* Two rows */
+    padding: 16px;
+}
+
+.environment-div .top {
+    text-align: left; /* Top row left aligned */
+}
+
+.environment-div .bottom {
+    text-align: right; /* Bottom row right aligned */
+}
+
+/* Define environment-specific variables for light and dark themes */
+@media (prefers-color-scheme: light) {
+    :root {
+        --environment-background: #dddddd; /* Slightly more gray for light theme */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --environment-background: #333333; /* Slightly more gray for dark theme */
+    }
+}
