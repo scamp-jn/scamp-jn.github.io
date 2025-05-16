@@ -3,6 +3,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<script>
+    const version = '1.0.0';
+    const links = document.querySelectorAll('link[rel="stylesheet"]');
+    links.forEach(link => {
+        const url = new URL(link.href);
+        url.searchParams.set('v', version);
+        link.href = url.toString();
+    });
+</script>
 
 <div class="top-div">
     <div class="environment-div">
