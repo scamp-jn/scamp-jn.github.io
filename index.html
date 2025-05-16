@@ -11,6 +11,10 @@
         url.searchParams.set('v', version);
         link.href = url.toString();
     });
+
+    setInterval(() => {
+        location.reload();
+    }, 5 * 60 * 1000); // Refresh every 5 minutes
 </script>
 
 <div class="top-div">
