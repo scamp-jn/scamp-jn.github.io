@@ -42,29 +42,34 @@ body {
 }
 
 h1{
-    font-size: 4em;
+    font-size: 8vh;
+    margin-top: 0;
+}
+
+p{
+    margin: 0;
+}
+
+.version-text {
+    font-size: 2vh;
+    font-weight: 200;
+    margin-top: 0;
+    align-self: end; /* Aligns the text to the bottom of the grid row */
 }
 
 .version-number{
-    font-size: 3em;
-    font-weight: 600;
+    font-size: 6vh;
+    font-weight: 400;
+    margin-top: 0px;
 }
 
 .environment-div {
-    background-color: var(--environment-background); /* Theme-aware background color */
-    border-radius: 10px; /* Rounded borders */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    background-color: var(--environment-background);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: grid;
-    grid-template-rows: auto auto; /* Two rows */
+    grid-template-rows: auto auto auto;
     padding: 16px;
-}
-
-.environment-div .top {
-    text-align: left; /* Top row left aligned */
-}
-
-.environment-div .bottom {
-    text-align: right; /* Bottom row right aligned */
 }
 
 /* Define environment-specific variables for light and dark themes */
@@ -78,4 +83,8 @@ h1{
     :root {
         --environment-background: #333333; /* Slightly more gray for dark theme */
     }
+}
+
+.text-right {
+    text-align: right;
 }
